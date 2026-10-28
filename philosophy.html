@@ -1,0 +1,219 @@
+<!doctype html>
+<!-- Development by Nikoloz Suladze | 2025 -->
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Treviark - The House of Rarity</title>
+  <meta name="description" content="Discover Treviark — a house where ritual unfolds through food, design and tea. A realm of pure, organic taste and curated gift experiences.">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css?v1" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v27">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YBCCJKV7PS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YBCCJKV7PS');
+  </script>
+
+  <!-- Lazy Loading -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const video = document.getElementById("heroVideo");
+      const preloader = document.getElementById("preloader");
+
+      const fallback = setTimeout(() => {
+        document.body.classList.remove("loading");
+        preloader.style.opacity = "0";
+        setTimeout(() => preloader.remove(), 600);
+      }, 7000);
+
+      video.addEventListener("canplaythrough", () => {
+        clearTimeout(fallback);
+        document.body.classList.remove("loading");
+        preloader.style.opacity = "0";
+        setTimeout(() => preloader.remove(), 600);
+      });
+    });
+  </script>
+</head>
+
+<body class="cover-mode loading" style="background:#fff;">
+
+  <!-- Preloader -->
+  <style>
+    body.loading {
+      overflow: hidden;
+      visibility: hidden;
+    }
+    #preloader {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      transition: opacity 0.6s ease;
+    }
+  </style>
+  <div id="preloader"></div>
+
+  <div class="cover-root" id="coverRoot" style="opacity:1">
+    <header class="topbar">
+      <div class="container-fluid">
+        <div class="row gx-0 align-items-center">
+
+          <div class="col-4 d-flex align-items-center gap-2 gap-md-3 ps-2 ps-md-3">
+            <button class="icon-btn js-menu-open" aria-label="Open menu" title="Menu">
+              <svg class="hamburger" width="30" height="22" viewBox="0 0 90 66" aria-hidden="true">
+                <line x1="8" y1="11.5" x2="82" y2="11.5"></line>
+                <line x1="8" y1="38.0" x2="82" y2="38.0"></line>
+                <line x1="8" y1="64.5" x2="82" y2="64.5"></line>
+              </svg>
+            </button>
+          </div>
+
+          <div class="col-4 text-center">
+            <a class="d-inline-flex justify-content-center brand" href="https://shop.treviark.com/">
+              <img class="img-fluid brand-img" width="781" height="352" src="logo (1).png" alt="Treviark" />
+            </a>
+          </div>
+
+          <div class="col-4"></div>
+        </div>
+      </div>
+    </header>
+
+    <aside class="side-menu" id="sideMenu" aria-hidden="true">
+      <div class="side-menu__inner">
+        <div class="d-flex justify-content-end">
+          <button class="side-menu__close js-menu-close" aria-label="Close menu">CLOSE</button>
+        </div>
+        <hr class="side-menu__rule"/>
+        <nav class="side-menu__nav">
+          <a href="https://treviark.com/philosophy.html">House Philosophy</a>
+          <a href="https://shop.treviark.com/">Shop</a>
+          <a href="https://shop.treviark.com/menu/Society">Society</a>
+        </nav>
+      </div>
+    </aside>
+
+    <div class="side-scrim" id="sideScrim" hidden></div>
+
+    <section class="cover">
+      <video id="heroVideo"
+             class="cover-video"
+             playsinline
+             webkit-playsinline
+             muted
+             autoplay
+             loop
+             preload="none"
+             poster="heroCover.jpg">
+        <source src="cover-mobile-compressed.mp4" type="video/mp4">
+      </video>
+
+      <img class="cover-img" src="heroCover.jpg" alt="Cover" />
+
+      <div class="cover-copy"
+           style="position:absolute; left:50%; top:25%; transform:translate(-50%,0);
+                  text-align:center; color:#fff; z-index:3;">
+
+        <style>
+          html { background: #000; }
+          body.cover-mode { background: #000 !important; }
+
+          .cover::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.35);
+            z-index: 1;
+          }
+
+          .cover > * {
+            position: relative;
+            z-index: 2;
+          }
+        </style>
+
+        <!-- Mobile -->
+        <h3 class="lead d-sm-none" style="margin:20px 0 0; font-size:16px !important;">
+          Treviark is a house of rarity — a curated realm where living unfolds as a respectful ritual,
+          rooted deeply in a culture of manifold landscapes and botanical integration.<br>
+          Within the house of Treviark, tea and honey are presented in their most authentic form. <br>
+          Our teas originate from Georgian plantations left untouched since the early twentieth century,
+          where cold winters naturally protect the bushes and allow them to thrive without artificial influence.<br>
+          Treviark Blossom Honey is harvested in small batches from Georgian highland apiaries, 
+          gathered from seasonal blossoms and preserved in its purest form.
+        </h3>
+
+        <!-- Desktop -->
+        <h3 class="lead d-none d-sm-block" style="margin:100px 0 0; font-size:22px !important;">
+          Treviark is a house of rarity — a curated realm where living unfolds as a respectful ritual,
+          rooted deeply in a culture of manifold landscapes and botanical integration.<br>
+          Within the house of Treviark, tea and honey are presented in their most authentic form. <br>
+          Our teas originate from Georgian plantations left untouched since the early twentieth century, 
+          where cold winters naturally protect the bushes and allow them to thrive without artificial influence.<br>
+          Treviark Blossom Honey is harvested in small batches from Georgian highland apiaries, 
+          gathered from seasonal blossoms and preserved in its purest form.
+        </h3>
+      </div>
+
+      <div class="cover-title"
+           style="position:absolute; left:50%; top:75%; transform:translate(-50%,0);
+                  color:#fff; font-weight:700; letter-spacing:.08em;
+                  text-shadow:0 2px 12px rgba(0,0,0,.35);
+                  text-align:center; margin-top:20px; z-index:3; font-size:16px;">
+        <a href="https://shop.treviark.com/" style="color:inherit; text-decoration:none;">SHOP</a>
+      </div>
+
+
+
+
+
+    </section>
+  </div>
+
+  <script>
+    (function () {
+      document.addEventListener('DOMContentLoaded', () => {
+        const menu = document.getElementById('sideMenu');
+        const scrim = document.getElementById('sideScrim');
+        const openBtn = document.querySelector('.js-menu-open');
+        const closeBtn = menu?.querySelector('.js-menu-close');
+
+        if (!menu) return;
+
+        const open = () => {
+          menu.classList.add('open');
+          document.body.classList.add('menu-open');
+          if (scrim) {
+            scrim.hidden = false;
+            requestAnimationFrame(() => scrim.classList.add('show'));
+          }
+        };
+
+        const close = () => {
+          menu.classList.remove('open');
+          document.body.classList.remove('menu-open');
+          if (scrim) {
+            scrim.classList.remove('show');
+            setTimeout(() => (scrim.hidden = true), 180);
+          }
+        };
+
+        openBtn?.addEventListener('click', open);
+        closeBtn?.addEventListener('click', close);
+        scrim?.addEventListener('click', close);
+        window.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') close();
+        });
+      });
+    })();
+  </script>
+
+  <div class="bounce-hint" aria-hidden="true"></div>
+</body>
+</html>
