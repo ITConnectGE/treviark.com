@@ -1,0 +1,16 @@
+{
+  "title": "Our Philosophy1",
+  "sections": [
+    {
+      "id": "section1",
+      "heading": "Our Core Values",
+      "content": "At Treviark, we believe in creating meaningful experiences that resonate with our values and principles. Our philosophy is built on a foundation of integrity, innovation, and genuine connection."
+    },
+    {
+      "id": "section2",
+      "heading": "Our Mission",
+      "content": "We strive to deliver excellence in everything we do, always putting our clients and community at the heart of our decisions."
+    }
+  ],
+  "lastUpdated": "2025-12-27T20:45:15.401Z"
+}
